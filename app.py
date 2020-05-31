@@ -1,5 +1,4 @@
 from flask import Flask
-import requests
 
 app = Flask(__name__)
 
@@ -14,8 +13,6 @@ def health_check():
     return "Success"
 
 
-@app.route('/api/v1/fobar')
+@app.route('/api/v1/fo0bar')
 def api():
-    resp = requests.get("https://status.github.com/api/status.json")
-    txt = resp.text
-    return txt
+    return '{"foo":"bar"}'
