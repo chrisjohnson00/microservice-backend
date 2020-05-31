@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import Response
 
 app = Flask(__name__)
 
@@ -15,4 +16,4 @@ def health_check():
 
 @app.route('/api/v1/foobar')
 def api():
-    return '{"foo":"bar"}'
+    return Response('{"foo":"bar"}', mimetype='application/json')
