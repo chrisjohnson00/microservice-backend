@@ -13,6 +13,6 @@ def health_check():
     return "Success"
 
 
-@app.route('/api/v1/fo0bar')
+@app.route('/api/v1/foobar')
 def api():
     return '{"foo":"bar"}'
